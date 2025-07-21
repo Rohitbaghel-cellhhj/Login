@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.shadowauth'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://papermc.io/repo/repository/maven-public/' }
+}
+
+dependencies {
+    compileOnly 'com.velocitypowered:velocity-api:3.4.0-SNAPSHOT'
+    annotationProcessor 'com.velocitypowered:velocity-api:3.4.0-SNAPSHOT'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
